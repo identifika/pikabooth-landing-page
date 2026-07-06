@@ -6,8 +6,10 @@ export default function Home() {
     <main className="flex-1 flex flex-col items-center relative bg-background text-foreground selection:bg-primary/20">
 
       {/* Background Gradient Orbs */}
-      <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-primary/20 blur-[120px] mix-blend-screen pointer-events-none" />
-      <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] rounded-full bg-accent/20 blur-[120px] mix-blend-screen pointer-events-none" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-[-200px] left-[-200px] w-[500px] h-[500px] rounded-full bg-primary/20 blur-[120px] mix-blend-screen" />
+        <div className="absolute bottom-[-200px] right-[-200px] w-[500px] h-[500px] rounded-full bg-accent/20 blur-[120px] mix-blend-screen" />
+      </div>
 
       {/* Decorative Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
