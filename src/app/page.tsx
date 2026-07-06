@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-background text-foreground selection:bg-primary/20">
+    <main className="flex-1 flex flex-col items-center relative bg-background text-foreground selection:bg-primary/20">
 
       {/* Background Gradient Orbs */}
       <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-primary/20 blur-[120px] mix-blend-screen pointer-events-none" />
@@ -13,7 +13,7 @@ export default function Home() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-5xl px-6 flex flex-col items-center text-center py-20">
+      <div className="relative z-10 w-full max-w-5xl px-6 flex flex-col items-center text-center pt-20 pb-10">
 
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary border border-border/50 text-sm font-medium mb-8 shadow-sm text-white">
@@ -93,11 +93,58 @@ export default function Home() {
           </Link>
 
         </div>
+
+        {/* FAQ Section */}
+        <div className="w-full max-w-3xl mx-auto mt-32 text-left">
+          <div className="mb-10 text-center">
+            <h2 className="text-3xl font-bold mb-3 font-sans">Good to know</h2>
+            <p className="text-muted-foreground font-sans">Questions long distance couples ask.</p>
+          </div>
+
+          <div className="space-y-4">
+            {[
+              {
+                q: "Is the online photobooth free?",
+                a: "Yes. Open a room, share the link, and shoot together for free. Using the booth costs absolutely nothing."
+              },
+              {
+                q: "How does it work for a long distance couple?",
+                a: "One person opens a room and sends the link; the other opens it in their browser and joins. A shared countdown fires the shot on both screens at the same second, so each frame of the photo strip holds both of you — even though you're in different places."
+              },
+              {
+                q: "Do we need to install an app?",
+                a: "No. PikaBooth runs right in the browser on phone or laptop. Allow camera access and you're in — nothing to download."
+              },
+              {
+                q: "What else can we do on PikaBooth?",
+                a: "PikaBooth is growing into a hub of fun dates and memories. You can create custom frames, apply creative filters, and publish your designs to the community."
+              }
+            ].map((faq, i) => (
+              <details key={i} className="group border border-border/50 bg-card/40 backdrop-blur-sm rounded-2xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                <summary className="flex items-center justify-between cursor-pointer p-6 font-medium text-foreground hover:bg-card/60 transition-colors outline-none font-sans">
+                  {faq.q}
+                  <span className="relative flex shrink-0 ml-4 w-4 h-4">
+                    <span className="absolute inset-0 bg-foreground/60 h-[2px] w-full top-1/2 -translate-y-1/2 transition-colors duration-300 group-open:bg-primary" />
+                    <span className="absolute inset-0 bg-foreground/60 w-[2px] h-full left-1/2 -translate-x-1/2 transition-transform duration-300 group-open:rotate-90 group-open:bg-primary" />
+                  </span>
+                </summary>
+                <div className="px-6 pb-6 text-muted-foreground leading-relaxed font-sans mt-1">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+
       </div>
 
       {/* Footer */}
-      <div className="absolute bottom-6 w-full text-center text-xs text-muted-foreground/60 font-sans">
-        &copy; {new Date().getFullYear()} PikaBooth. All rights reserved.
+      <div className="mt-auto w-full text-center text-xs text-muted-foreground/60 font-sans pb-8 flex flex-col items-center gap-2">
+        <div>&copy; {new Date().getFullYear()} PikaBooth. All rights reserved.</div>
+        <div className="flex gap-4">
+          <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+          <Link href="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>
+        </div>
       </div>
     </main>
   );
