@@ -32,7 +32,7 @@ export default function Home() {
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-16 font-sans">
-          Choose your experience. Whether you're looking for a classic photobooth session or a romantic memory, we have the perfect setup for you.
+          Choose your experience. Whether you&apos;re looking for a classic photobooth session or a romantic memory, we have the perfect setup for you.
         </p>
 
         {/* Mode Selection Cards */}
