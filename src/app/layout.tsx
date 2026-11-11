@@ -14,11 +14,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "PikaBooth - Capture the Perfect Moment",
-  description: "PikaBooth is a modern, open-source photobooth experience. Choose between a classic studio session or a romantic couple date mode.",
-  keywords: ["photobooth", "photo booth", "pika booth", "pikabooth", "open source photobooth", "date mode photobooth", "studio photobooth"],
+  description: "PikaBooth is a modern, open-source photobooth experience. Choose between a classic studio session, a romantic couple date mode, or play Tebak Kita.",
+  keywords: ["photobooth", "photo booth", "pika booth", "pikabooth", "open source photobooth", "date mode photobooth", "studio photobooth", "tebak kita", "couple game"],
   openGraph: {
     title: "PikaBooth - Capture the Perfect Moment",
-    description: "PikaBooth is a modern, open-source photobooth experience. Choose between a classic studio session or a romantic couple date mode.",
+    description: "PikaBooth is a modern, open-source photobooth experience. Choose between a classic studio session, a romantic couple date mode, or play Tebak Kita.",
     url: "https://pikabooth.web.id",
     siteName: "PikaBooth",
     locale: "en_US",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "PikaBooth - Capture the Perfect Moment",
-    description: "PikaBooth is a modern, open-source photobooth experience. Choose between a classic studio session or a romantic couple date mode.",
+    description: "PikaBooth is a modern, open-source photobooth experience. Choose between a classic studio session, a romantic couple date mode, or play Tebak Kita.",
   },
 };
 

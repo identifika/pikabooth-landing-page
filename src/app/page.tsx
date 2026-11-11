@@ -1,4 +1,4 @@
-import { Camera, Heart, Sparkles, ArrowRight } from "lucide-react";
+import { Camera, Heart, Sparkles, ArrowRight, Gamepad2 } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -32,21 +32,21 @@ export default function Home() {
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-16 font-sans">
-          Choose your experience. Whether you&apos;re looking for a classic photobooth session or a romantic memory, we have the perfect setup for you.
+          Choose your experience. Whether you&apos;re looking for a classic photobooth session, a romantic date, or a fun couple game, we have the perfect setup for you.
         </p>
 
         {/* Mode Selection Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl mx-auto">
 
           {/* Card 1: Studio Mode */}
           <Link href="https://app.pikabooth.web.id/" className="group relative block w-full outline-none">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-3xl blur-md transition-opacity opacity-0 group-hover:opacity-100 group-focus:opacity-100" />
-            <div className="relative h-full p-8 rounded-3xl bg-card/60 backdrop-blur-xl border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 group-hover:-translate-y-1 overflow-hidden">
+            <div className="relative h-full p-8 rounded-3xl bg-card/60 backdrop-blur-xl border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 group-hover:-translate-y-1 overflow-hidden flex flex-col">
 
               {/* Corner accent */}
               <div className="absolute -right-4 -top-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors" />
 
-              <div className="flex flex-col items-start text-left gap-4 relative z-10">
+              <div className="flex flex-col items-start text-left gap-4 relative z-10 flex-1">
                 <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                   <Camera className="w-7 h-7" />
                 </div>
@@ -58,7 +58,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-primary">
+                <div className="mt-auto pt-4 flex items-center gap-2 text-sm font-semibold text-primary">
                   <span>Enter Studio</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -69,12 +69,12 @@ export default function Home() {
           {/* Card 2: Date Mode */}
           <Link href="https://app.pikabooth.web.id/date" className="group relative block w-full outline-none">
             <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent rounded-3xl blur-md transition-opacity opacity-0 group-hover:opacity-100 group-focus:opacity-100" />
-            <div className="relative h-full p-8 rounded-3xl bg-card/60 backdrop-blur-xl border border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-2xl hover:shadow-accent/10 group-hover:-translate-y-1 overflow-hidden">
+            <div className="relative h-full p-8 rounded-3xl bg-card/60 backdrop-blur-xl border border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-2xl hover:shadow-accent/10 group-hover:-translate-y-1 overflow-hidden flex flex-col">
 
               {/* Corner accent */}
               <div className="absolute -right-4 -top-4 w-24 h-24 bg-accent/10 rounded-full blur-2xl group-hover:bg-accent/20 transition-colors" />
 
-              <div className="flex flex-col items-start text-left gap-4 relative z-10">
+              <div className="flex flex-col items-start text-left gap-4 relative z-10 flex-1">
                 <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent group-hover:scale-110 group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300">
                   <Heart className="w-7 h-7" />
                 </div>
@@ -86,8 +86,36 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-accent">
+                <div className="mt-auto pt-4 flex items-center gap-2 text-sm font-semibold text-accent">
                   <span>Start Date</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </div>
+          </Link>
+
+          {/* Card 3: Tebak Kita */}
+          <Link href="https://app.pikabooth.web.id/tebak-kita" className="group relative block w-full outline-none">
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent rounded-3xl blur-md transition-opacity opacity-0 group-hover:opacity-100 group-focus:opacity-100" />
+            <div className="relative h-full p-8 rounded-3xl bg-card/60 backdrop-blur-xl border border-border/50 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10 group-hover:-translate-y-1 overflow-hidden flex flex-col">
+
+              {/* Corner accent */}
+              <div className="absolute -right-4 -top-4 w-24 h-24 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 transition-colors" />
+
+              <div className="flex flex-col items-start text-left gap-4 relative z-10 flex-1">
+                <div className="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center text-purple-600 dark:text-purple-400 group-hover:scale-110 group-hover:bg-purple-500 group-hover:text-white transition-all duration-300">
+                  <Gamepad2 className="w-7 h-7" />
+                </div>
+
+                <div>
+                  <h2 className="text-2xl font-bold text-foreground mb-2">Tebak Kita</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    A fun guessing quiz for couples. Answer secretly, reveal together, and see how well you know each other.
+                  </p>
+                </div>
+
+                <div className="mt-auto pt-4 flex items-center gap-2 text-sm font-semibold text-purple-600 dark:text-purple-400">
+                  <span>Play Game</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
@@ -119,7 +147,7 @@ export default function Home() {
               },
               {
                 q: "What else can we do on PikaBooth?",
-                a: "PikaBooth is growing into a hub of fun dates and memories. You can create custom frames, apply creative filters, and publish your designs to the community."
+                a: "PikaBooth is growing into a hub of fun dates and memories. You can play Tebak Kita to test your couple knowledge, create custom frames, apply creative filters, and publish your designs to the community."
               }
             ].map((faq, i) => (
               <details key={i} className="group border border-border/50 bg-card/40 backdrop-blur-sm rounded-2xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
